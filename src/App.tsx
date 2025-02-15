@@ -1,37 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const abc = 5;
-  console.log(abc);
 
+  const [word, setWord] = useState('')
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <button onClick={() => console.log(abc)}>OKE</button>
-    </>
+   <div className='flex h-screen gap-5 items-center border border-red-500 justify-center'>
+      <input
+        type='text'
+        className='outline-none border border-blue-600 px-4 py-2 w-[400px]'
+        value={word}
+        onChange={e => setWord(e.target.value)}
+      />
+      <button 
+        type='button'
+        className='outline-none px-4 py-2 bg-blue-500 rounded-md text-white'
+        >
+          Add
+      </button>
+   </div>
   )
 }
 

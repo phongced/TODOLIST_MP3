@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Login from './pages/LoginPages';
 import User from "./pages/User";
+import App from "./App";
 const router = createBrowserRouter([
   {
     path: "/admin",
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/user",
     element: <User />,
+  },
+  {
+    path: "/Home",
+    element: <App />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')!).render(
